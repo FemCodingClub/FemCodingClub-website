@@ -1851,6 +1851,7 @@ input, select, textarea {
 		text-transform: uppercase;
 		white-space: nowrap;
 	}
+	
 
 		input[type="submit"]:after,
 		input[type="reset"]:after,
@@ -1976,6 +1977,7 @@ input, select, textarea {
 					opacity: 0.1;
 				}
 
+				
 /* Features */
 
 	.features {
@@ -3363,6 +3365,8 @@ input, select, textarea {
 			opacity: 0;
 		}
 
+
+
 /* Header */
 
 	#header {
@@ -3873,11 +3877,22 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
+		position: relative;
 		background-attachment: fixed;
-		background-image: url("images/intro.svg");
+		background-image: url("images/codeWomen2.jpg");
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
+	}
+
+	#intro::before {
+		content: "";
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		background-color: rgba(94,66,166,0.6);
 	}
 
 		#intro p {
@@ -3907,3 +3922,7 @@ input, select, textarea {
 			}
 
 		}
+
+		
+
+		
