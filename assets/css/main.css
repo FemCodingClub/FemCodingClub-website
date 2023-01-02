@@ -1978,13 +1978,59 @@ input, select, textarea {
 				}
 
 				
-/* Features */
+/*Features 2.0*/		
+.features{
+	display:grid;
+	grid-template-areas:"what where" "what when" "what who" ;
+  	grid-gap:10px;
+}		
+.features section {
+	border: solid 2px rgba(255, 255, 255, 0.15);
+	border: solid 2px white;
+	border-radius: 25px;
+	display: grid;
+	align-content: center;
+}
+.features section > p{
+	text-align: center;
+}
+.features section > div{
+	padding-left: 0.5em;
+	padding-top:  0.5em;
+}
+.features section > div h3{
+	float: left;
+	padding-top: 0.5em;
+	padding-left: 0.5em;
+}
+
+.features section .icon{
+	position: relative;
+	left: 0.1em;
+	float: left; 
+	opacity: 1;
+}
+
+#what{
+	grid-area: what;
+}
+
+#where{
+	grid-area: where;
+}
+#when{
+	grid-area: when;
+}
+#who{
+	grid-area: who;
+}
+/* Features 
 
 	.features {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
-		display: flex;
+		display: grid;
 		-moz-flex-wrap: wrap;
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
@@ -1993,13 +2039,31 @@ input, select, textarea {
 		border: solid 1px rgba(255, 255, 255, 0.15);
 		background: rgba(255, 255, 255, 0.05);
 		margin: 0 0 2em 0;
+		grid-template-areas: "what what where" "what what when" "what what who";
+		grid-gap: 1px;
 	}
+	
 
 		.features section {
 			padding: 3.5em 3em 1em 7em ;
+			border-top: solid 1px rgba(255, 255, 255, 0.15);
 			width: 50%;
 			border-top: solid 1px rgba(255, 255, 255, 0.15);
 			position: relative;
+			display: grid;
+		}
+
+		#what{
+			grid-area: "what";
+		}
+		#where{
+			grid-area: "where";
+		}
+		#when{
+			grid-area: "when";
+		}
+		#who{
+			grid-area: "who";
 		}
 
 			.features section:nth-child(-n + 2) {
