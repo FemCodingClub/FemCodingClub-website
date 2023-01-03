@@ -1979,32 +1979,38 @@ input, select, textarea {
 
 				
 /*Features 2.0*/		
-
+.info{
+	margin: 0 auto;
+}
+.info > h2,p{
+	text-align: center;
+}
 .features{
 	display:grid;
 	grid-template-areas:"what where" "what when" "what who" ;
   	grid-gap:10px;
 }		
 .features section {
-	border: solid 2px rgba(255, 255, 255, 0.15);
-	border: solid 2px white;
+	/*border: solid 2px rgba(255, 255, 255, 0.15);*/
+	border: solid 2px rgba(255, 255, 255, 0.2);
 	border-radius: 25px;
 	display: grid;
 	align-content: center;
-}
-.features section > p{
-	text-align: center;
 }
 .features section > div{
 	padding-left: 0.5em;
 	padding-top:  0.5em;
 }
+
 .features section > div h3{
 	float: left;
 	padding-top: 0.5em;
 	padding-left: 0.5em;
 }
-
+.features section > p{
+	padding: 0 0.5em 0 0.5em;
+	text-align: center;
+}
 .features section .icon{
 	position: relative;
 	left: 0.1em;
@@ -3278,6 +3284,7 @@ input, select, textarea {
 			width: 75em;
 		}
 
+
 			@media screen and (max-width: 1680px) {
 
 				.wrapper > .inner {
@@ -3313,6 +3320,9 @@ input, select, textarea {
 		.wrapper.style1-alt {
 			background-color: #493382;
 		}
+		.wrapper.style1-foot {
+			background-color: white;
+		}
 
 		.wrapper.style2 {
 			background-color: #5052b5;
@@ -3324,6 +3334,9 @@ input, select, textarea {
 
 		.wrapper.style3 {
 			background-color: #b74e91;
+			background-color: #7E3680;
+			background-color: #BA8BDB;
+			color: white;
 		}
 
 		.wrapper.style3-alt {
@@ -3374,6 +3387,51 @@ input, select, textarea {
 					}
 
 			}
+
+			.wrapper.midscreen {
+				display: -moz-flex;
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				-moz-flex-direction: column;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-moz-justify-content: center;
+				-webkit-justify-content: center;
+				-ms-justify-content: center;
+				justify-content: center;
+				min-height: 45vh;
+			}
+	
+				body.is-ie .wrapper.midscreen {
+					height: 45vh;
+				}
+	
+				@media screen and (max-width: 1280px) {
+	
+					.wrapper.midscreen {
+						min-height: calc(45vh - 2.5em);
+					}
+	
+						body.is-ie .wrapper.midscreen {
+							height: calc(45vh - 2.5em);
+						}
+	
+				}
+	
+				@media screen and (max-width: 736px) {
+	
+					.wrapper.midscreen {
+						padding: 2em 0;
+						min-height: 0;
+					}
+	
+						body.is-ie .wrapper.midscreen {
+							height: auto;
+						}
+	
+				}
 
 		.wrapper.fade-up > .inner {
 			-moz-transform: translateY(0);
@@ -3988,6 +4046,52 @@ input, select, textarea {
 
 		}
 
-		
+/* Three */
+		#three {
+			position: relative;
+			background-attachment: fixed;
+			background-image: url("images/codeWomen.png");
+			background-position: top right;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+	
+		#three::before {
+			content: "";
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			background-color: rgba(94,66,166,0.6);
+		}
+	
+			#three p {
+				font-size: 1.25em;
+			}
+	
+				@media screen and (max-width: 980px) {
+	
+					#three p br {
+						display: none;
+					}
+	
+				}
+	
+				@media screen and (max-width: 736px) {
+	
+					#three p {
+						font-size: 1em;
+					}
+	
+				}
+	
+			@media screen and (max-width: 1280px) {
+	
+				#three {
+					background-attachment: scroll;
+				}
+	
+			}
 
 		
