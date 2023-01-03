@@ -1979,6 +1979,7 @@ input, select, textarea {
 
 				
 /*Features 2.0*/		
+
 .features{
 	display:grid;
 	grid-template-areas:"what where" "what when" "what who" ;
