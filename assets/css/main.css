@@ -1984,6 +1984,7 @@ input, select, textarea {
 }
 .info > h2,p{
 	text-align: center;
+	align-items: center;
 }
 .features{
 	display:grid;
@@ -2031,6 +2032,54 @@ input, select, textarea {
 #who{
 	grid-area: who;
 }
+
+/*Contact 2.0*/		
+
+.contact{
+	display:grid;
+	grid-template-areas:"email social signUp";
+  	grid-gap:10px;
+	align-items: center;
+}		
+.contact section {
+	/*border: solid 2px rgba(255, 255, 255, 0.15);
+	border: solid 2px rgba(255, 255, 255, 0.2);
+	border-radius: 25px;*/
+	display: grid;
+	align-content: center;
+}
+.contact section > div{
+	padding-left: 0.5em;
+	padding-top:  0.5em;
+}
+
+.contact section > div h3{
+	float: left;
+	padding-top: 0.5em;
+	padding-left: 0.5em;
+}
+.contact section > p{
+	padding: 0 0.5em 0 0.5em;
+	text-align: center;
+}
+.contact section .icon{
+	position: relative;
+	left: 0.1em;
+	float: left; 
+	opacity: 1;
+}
+
+#email{
+	grid-area: email;
+}
+
+#social{
+	grid-area: social;
+}
+#signUp{
+	grid-area: signUp;
+}
+
 /* Features 
 
 	.features {
@@ -3321,7 +3370,7 @@ input, select, textarea {
 			background-color: #493382;
 		}
 		.wrapper.style1-foot {
-			background-color: white;
+			background-color: #CE8CA5;
 		}
 
 		.wrapper.style2 {
