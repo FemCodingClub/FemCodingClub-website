@@ -2034,7 +2034,13 @@ input, select, textarea {
 }
 
 /*Contact 2.0*/		
-
+.infoContact{
+	margin: 0 auto;
+}
+.infoContact > h2,p{
+	text-align: center;
+	align-items: center;
+}
 .contact{
 	display:grid;
 	grid-template-areas:"email social signUp";
@@ -2044,9 +2050,12 @@ input, select, textarea {
 .contact section {
 	/*border: solid 2px rgba(255, 255, 255, 0.15);
 	border: solid 2px rgba(255, 255, 255, 0.2);
-	border-radius: 25px;*/
+	border-radius: 25px;
+	background-color: white;*/
 	display: grid;
 	align-content: center;
+	height: 100%;
+	
 }
 .contact section > div{
 	padding-left: 0.5em;
@@ -2057,10 +2066,10 @@ input, select, textarea {
 	float: left;
 	padding-top: 0.5em;
 	padding-left: 0.5em;
+
 }
 .contact section > p{
 	padding: 0 0.5em 0 0.5em;
-	text-align: center;
 }
 .contact section .icon{
 	position: relative;
@@ -2071,13 +2080,32 @@ input, select, textarea {
 
 #email{
 	grid-area: email;
+	text-align: center;
 }
 
 #social{
 	grid-area: social;
+	text-align: center;
 }
 #signUp{
 	grid-area: signUp;
+	text-align: center;
+}
+
+
+.contact section > ul {
+	margin: 0 auto;
+}
+
+.contact section > .emailTo{
+	border: none!important;
+
+	color: #ffffff !important;
+	outline: 0;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
 }
 
 /* Features 
