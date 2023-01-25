@@ -171,7 +171,7 @@ em, i {
 }
 
 p {
-    background-color: black;
+    background-color: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -312,9 +312,9 @@ h6 {
         display:grid;
         grid-template-areas:"what where" "what when" "what who" ;
           grid-gap:10px;
+          padding-top: 1em;
     }		
     .features section {
-        /*border: solid 2px rgba(255, 255, 255, 0.15);*/
         border: solid 2px rgba(255, 255, 255, 0.2);
         border-radius: 25px;
         display: grid;
@@ -331,8 +331,7 @@ h6 {
         padding-left: 0.5em;
     }
     .features section > p{
-        padding: 0 0.5em 0 0.5em;
-        text-align: center;
+        padding: 0 0.5em 2em 0.5em;
     }
     .features section .icon{
         position: relative;
@@ -431,16 +430,49 @@ h6 {
 	white-space: nowrap;
 }
 
-/*1ra pagina*/
+/* Intro */
+
 
 #intro {
     position: relative;
     background-attachment: fixed;
-    background-image: url("images/codeWomen2.jpg");
+    background-image: 
+    linear-gradient(
+      rgba(94,66,166, 0.6), 
+      rgba(94,66,166, 0.6)
+    ),
+    url("images/codeWomen2.jpg");
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
+
+#intro::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+
+}
+
+        @media screen and (max-width: 980px) {
+
+            #intro p br {
+                display: none;
+            }
+
+        }
+
+        @media screen and (max-width: 736px) {
+
+            #intro p {
+                font-size: 1em;
+            }
+
+        }
 
     @media screen and (max-width: 1280px) {
 
@@ -451,6 +483,112 @@ h6 {
     }
 
 
+/* Icon */
+
+.icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+}
+
+    .icon:before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        text-transform: none !important;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 400;
+    }
+
+    .icon > .label {
+        display: none;
+    }
+
+    .icon:before {
+        line-height: inherit;
+    }
+
+    .icon.solid:before {
+        font-weight: 900;
+    }
+
+    .icon.brands:before {
+        font-family: 'Font Awesome 5 Brands';
+    }
+
+    .icon.organizers:before {
+        font-family: 'Font Awesome 5 Regular';
+    }
+
+    .icon.major {
+        width: 2.5em;
+        height: 2.5em;
+        display: block;
+        background: #ffffff;
+        border-radius: 100%;
+        color: #312450;
+        text-align: center;
+        line-height: 2.5em;
+        margin: 0 0 1.3em 0;
+    }
+
+        .icon.major:before {
+            font-size: 1.25em;
+        }
+
+            .wrapper.style1 .icon.major:before {
+                color: #5e42a6;
+            }
+
+            .wrapper.style1-alt .icon.major:before {
+                color: #493382;
+            }
+
+            .wrapper.style2 .icon.major:before {
+                color: #5052b5;
+            }
+
+            .wrapper.style2-alt .icon.major:before {
+                color: #3e4094;
+            }
+
+            .wrapper.style3 .icon.major:before {
+                color: #b74e91;
+            }
+
+            .wrapper.style3-alt .icon.major:before {
+                color: #953d75;
+            }
+
+            
+/* Icons */
+
+	ul.icons {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+	}
+
+		ul.icons li {
+			display: inline-block;
+			padding: 0 0.75em 0 0;
+		}
+
+			ul.icons li:last-child {
+				padding-right: 0;
+			}
+
+			ul.icons li > a, ul.icons li > span {
+				border: 0;
+			}
+
+				ul.icons li > a .label, ul.icons li > span .label {
+					display: none;
+				}
 
 /* Wrapper */
 .wrapper {
@@ -490,6 +628,15 @@ h6 {
     .wrapper.style3 {
 			background-color: #BA8BDB;
 			color: white;
+		}
+        .wrapper.style1 {
+			background-color: #5e42a6;
+            color: white;
+		}
+
+		.wrapper.style1-alt {
+			background-color: #493382;
+            color: white;
 		}
 
 		.wrapper.fullscreen {
@@ -552,3 +699,7 @@ h6 {
 #header + #wrapper + #footer > .inner {
     margin: 0 auto;
 }
+
+
+
+   
