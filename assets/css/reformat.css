@@ -365,7 +365,7 @@ h6 {
 }
 .contact{
 	display:grid;
-	grid-template-areas:"email social signUp";
+	grid-template-areas:"email social signUp organizers";
   	grid-gap:10px;
 	align-items: center;
 }		
@@ -411,6 +411,10 @@ h6 {
 }
 #signUp{
 	grid-area: signUp;
+	text-align: center;
+}
+#organizers{
+	grid-area: organizers;
 	text-align: center;
 }
 
@@ -521,7 +525,7 @@ h6 {
     }
 
     .icon.organizers:before {
-        font-family: 'Font Awesome 5 Regular';
+        font-family: 'Font Awesome 5 Free';
     }
 
     .icon.major {
